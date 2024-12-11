@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "JetBrains Rider Dark Theme",
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "clangd.detectExtensionConflicts": false,
+    "code-runner.runInTerminal": true,
+    "cmake.options.statusBarVisibility": "visible",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "files.autoSave": "afterDelay"
+}

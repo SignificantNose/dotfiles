@@ -1,0 +1,65 @@
+general.import=[
+	"~/.config/alacritty/themes/github_dark_high_contrast.toml"
+]
+
+
+[window]
+padding.x=10
+padding.y=10
+
+startup_mode="Fullscreen"
+title = "Alacritty"
+
+#opacity=0.7
+#blur=true
+#decorations="None"
+
+
+
+[font]
+normal.family="Hack Nerd Font Mono"
+normal.style="Regular"
+
+italic.family="Hack Nerd Font Mono"
+italic.style="Italic"
+
+bold.family="Hack Nerd Font Mono"
+bold.style="Bold"
+
+offset.y=1
+
+
+
+[cursor]
+thickness=0.10
+
+[cursor.style]
+shape="Underline"
+blinking="Off"
+
+
+
+#[[keyboard.bindings]]
+#action = "CreateNewWindow"
+#key = "F12"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[[keyboard.bindings]]
+action = "ScrollPageUp"
+key = "F6"
+#mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollPageDown"
+key = "F5"
+#mods = "Control|Shift"
+
+
+
+[terminal.shell]
+program="/usr/bin/zsh"
+args=["-c","tmux"]
+

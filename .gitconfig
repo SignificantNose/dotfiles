@@ -1,0 +1,13 @@
+[user]
+	name = significantnose
+	email = yanucevich.d@gmail.com
+[init]
+	defaultBranch = main
+[alias]
+	ct = commit
+	co = checkout
+	ss = status
+	br = branch
+[core]
+	editor = nano -w
+	pager = cat
