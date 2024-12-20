@@ -3,6 +3,7 @@
 ## Todo
 - Add script for installing the required packages (the configs for which are provided)
 - Add stow-ignore (presumably in order to avoid stow reading the installation script)
+- Clone p10k for zsh to work properly
 
 ## Requirements
 
