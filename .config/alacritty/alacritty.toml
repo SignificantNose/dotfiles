@@ -5,8 +5,9 @@ general.import=[
 
 
 [window]
-padding.x=10
-padding.y=10
+#padding.x=0
+#padding.y=0
+dynamic_padding=true
 
 #startup_mode="Fullscreen"
 title = "Alacritty"
