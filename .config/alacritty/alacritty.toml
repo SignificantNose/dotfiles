@@ -1,6 +1,5 @@
-
 general.import=[
-	"~/.config/alacritty/themes/github_dark_high_contrast.toml"
+  "~/.config/alacritty/themes/github_dark_high_contrast.toml"
 ]
 
 
@@ -64,4 +63,3 @@ key = "F5"
 [terminal.shell]
 program="/usr/bin/zsh"
 args=["-c","tmux"]
-
