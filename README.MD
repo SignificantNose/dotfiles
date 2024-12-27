@@ -4,6 +4,7 @@
 - Add script for installing the required packages (the configs for which are provided)
 - Add stow-ignore (presumably in order to avoid stow reading the installation script)
 - Install zim in the installation script, provide p10k config accordingly
+- Add script for stowing all the applications accordingly (to not do it manually each time)
 
 ## Requirements
 
@@ -18,7 +19,7 @@ A symlink farm manager called `stow` is used in order to convenientely set up th
 ```
 cd ~/dotfiles
 ```
-3. 
+3. For each application you need the dotfiles for, do the following:
 ```
-stow .
+stow <application-name>
 ```
