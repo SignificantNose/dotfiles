@@ -14,7 +14,11 @@ color=#A4C2F4
 command=$SCRIPT_DIR/volume-pipewire
 interval=once
 signal=1
-##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+
+# exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+# bluetooth headphones do not show their name here for some reason:
+#LONG_FORMAT="${SYMB} ${VOL}% ${NAME}"
+#USE_ALSA_NAME=1
 LONG_FORMAT="${SYMB} ${VOL}%"
 SHORT_FORMAT="${SYMB} ${VOL}%"
 DEFAULT_COLOR="#ffffff"
