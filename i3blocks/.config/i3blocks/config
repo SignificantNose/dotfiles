@@ -10,6 +10,12 @@ interval=3600
 color=#A4C2F4
 
 
+# AUR package: xkb-switch-git
+[keymap]
+label=⌨ 
+command=bash -c 'xkb-switch;xkb-switch -W'
+interval=persist
+
 [volume-pipewire]
 command=$SCRIPT_DIR/volume-pipewire
 interval=once
