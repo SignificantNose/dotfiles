@@ -84,6 +84,13 @@ exec --no-startup-id dex --autostart --environment i3
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+#=================#
+# Keyboard layout #
+#=================#
+
+#exec_always "setxkbmap -layout us,ru"
+#exec_always "setxkbmap -option 'grp:lalt_lshift_toggle'"
+exec_always "setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle"
 
 #==============#
 # Key bindings #
