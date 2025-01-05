@@ -58,7 +58,7 @@ set $timeout_dim 300
 set $timeout_screen_off 310
 set $timeout_lock_screen 315
 
-exec sh /home/significantnose/.config/i3/scripts/set-up-idle.sh $timeout_dim $timeout_screen_off $timeout_lock_screen
+exec sh ~/.config/i3/scripts/screen-idle/set-up-idle.sh $timeout_dim $timeout_screen_off $timeout_lock_screen
 
 # xautolock could've been used, but it does not hook sleep:
 #exec --no-startup-id xautolock -time 15 -locker 'systemctl suspend' -notify 600 -notifier 'i3lock | xset dpms force off' &
@@ -305,5 +305,5 @@ bar {
 # Natural scrolling and tap-to-click #
 #====================================#
 # scripts from: https://github.com/maxwell-bland/i3-natural-scrolling-and-tap/
-exec ~/.config/i3/scripts/inverse-scroll.sh
-exec ~/.config/i3/scripts/tap-to-click.sh
+exec ~/.config/i3/scripts/touchpad/inverse-scroll.sh
+exec ~/.config/i3/scripts/touchpad/tap-to-click.sh
