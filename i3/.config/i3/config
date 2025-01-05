@@ -301,4 +301,9 @@ bar {
 #    }
 #}
 
-
+#====================================#
+# Natural scrolling and tap-to-click #
+#====================================#
+# scripts from: https://github.com/maxwell-bland/i3-natural-scrolling-and-tap/
+exec ~/.config/i3/scripts/inverse-scroll.sh
+exec ~/.config/i3/scripts/tap-to-click.sh
