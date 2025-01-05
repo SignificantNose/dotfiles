@@ -31,11 +31,16 @@ DEFAULT_COLOR="#ffffff"
 MUTED_COLOR="#a0a0a0"
 
 
+[battery2]
+command=$SCRIPT_DIR/battery2
+markup=pango
+interval=30
+
 # Query my default IP address only on startup
-[ip]
-command=hostname -i | awk '{ print "IP:" $1 }'
-interval=once
-color=#91E78B
+#[ip]
+#command=hostname -i | awk '{ print "IP:" $1 }'
+#interval=once
+#color=#91E78B
 
 # Update time every 5 seconds
 [time]
