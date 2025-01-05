@@ -15,25 +15,50 @@ set $right l
 set $term alacritty
 set $menu rofi -show run
 
+
 # Colors
 set $text_color #ffffff
 
 set $background #000000
 set $color_urgent #fb4934
 set $title_bg_unfocused #666666
-set $title_outline_active #22cac4
+set $title_outline_active #444444
 set $title_outline_unfocused #332b2b
 
 #============#
 # Appearance #
 #============#
 
-# Set Colors:           Border                   Background          Text          Indicator             Child Border
-client.background       $background
-client.focused          $title_outline_active    $background         $text_color   $title_outline_active $title_outline_active
-client.focused_inactive $title_outline_unfocused $background         $text_color   $text_color           $title_outline_unfocused
-client.unfocused        $title_outline_unfocused $title_bg_unfocused $text_color   $title_outline_active
-client.urgent           $color_urgent            $color_urgent       $color_urgent $color_urgent         $color_urgent
+# Nord theme color scheme: https://www.nordtheme.com/docs/colors-and-palettes
+set $nord0 #2e3440
+set $nord1 #3b4252
+set $nord2 #434c5e
+set $nord3 #4c566a
+
+set $nord4 #d8dee9
+set $nord5 #e5e9f0
+set $nord6 #eceff4
+
+set $nord7 #8fbcbb
+set $nord8 #88c0d0
+set $nord9 #81a1c1
+set $nord10 #5e81ac
+
+set $nord11 #bf616a
+set $nord12 #d08770
+set $nord13 #ebcb8b
+set $nord14 #a3be8c
+set $nord15 #b48ead
+
+# Set Colors:           Border 	BG     	Text     Indicator  Child Border
+client.focused          $nord3 	$nord3 	#F8F8F2  $nord3     $nord3
+client.focused_inactive $nord3 	$nord3 	#F8F8F2  $nord3     $nord3
+client.unfocused        $nord0 	$nord0 	#BFBFBF  $nord0     $nord0
+client.urgent           $nord0 	$nord6 	#F8F8F2  $nord6     $nord6
+client.placeholder      $nord0 	$nord0 	#F8F8F2  $nord0     $nord0
+
+client.background       #F8F8F2
+
 
 # Add gaps in between all application windows:
 gaps inner 3
