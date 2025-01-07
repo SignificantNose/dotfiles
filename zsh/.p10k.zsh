@@ -377,11 +377,12 @@
 
     if (( $1 )); then
       # Styling for up-to-date Git status.
-      local       meta='%244F'  # grey foreground
-      local      clean='%76F'   # green foreground
-      local   modified='%178F'  # yellow foreground
-      local  untracked='%39F'   # blue foreground
-      local conflicted='%196F'  # red foreground
+      # Foreground colors:
+      local       meta='%244F'	# grey
+      local      clean='%87F'	# prev: green 76
+      local   modified='%69F'	# prev: yellow 178
+      local  untracked='%81F'	# prev: blue 39
+      local conflicted='%165F'	# prev: red 196
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
@@ -508,9 +509,9 @@
 
   # These settings are used for repositories other than Git or when gitstatusd fails and
   # Powerlevel10k has to fall back to using vcs_info.
-  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=76
-  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=76
-  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=178
+  typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=87	# prev: green 76
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND=81	# prev: green 76
+  typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND=69	# prev: yellow 178
 
   ##########################[ status: exit code of the last command ]###########################
   # Enable OK_PIPE, ERROR_PIPE and ERROR_SIGNAL status states to allow us to enable, disable and
