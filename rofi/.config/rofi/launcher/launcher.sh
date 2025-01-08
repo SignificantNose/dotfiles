@@ -9,5 +9,5 @@ theme='main'
 
 ## Run
 rofi \
-    -show drun \
+    -show run \
     -theme ${styles_dir}/${theme}.rasi

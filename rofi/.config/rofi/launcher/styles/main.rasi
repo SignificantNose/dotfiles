@@ -8,15 +8,24 @@
  **/
 
 /*****----- Configuration -----*****/
+/*
 configuration {
-	modi:                       "drun,run,filebrowser";
-    show-icons:                 false;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
-	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	window-format:              "{w} · {c} · {t}";
+     modi: 			"drun,run,filebrowser";
+     show-icons:		false;
+     display-drun:		"";
+     display-run:		"";
+     display-filebrowser:	"";
+     display-window:		"";
+     display-calc:		"🖩";
+     drun-display-format:	"{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+     window-format:		"{w} · {c} · {t}";
+}
+*/
+configuration {
+	modi:		"run,calc";
+    	show-icons:	false;
+    	display-run:	"";
+    	display-calc:	"🖩";
 }
 
 /*****----- Global Properties -----*****/
