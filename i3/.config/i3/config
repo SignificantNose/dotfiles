@@ -70,7 +70,7 @@ default_border pixel 2
 #============#
 # Wallpapers #
 #============#
-exec feh --bg-fill --randomize ~/Pictures/Wallpapers
+exec feh --bg-fill -F --randomize ~/Pictures/Wallpapers
 
 
 #===========================#
