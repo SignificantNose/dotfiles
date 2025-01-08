@@ -13,7 +13,8 @@ set $right l
 
 # Variables for launched applications
 set $term alacritty
-set $menu ~/.config/rofi/launcher.sh
+set $menu ~/.config/rofi/launcher/launcher.sh
+set $powermenu ~/.config/rofi/powermenu/powermenu.sh
 
 
 # Colors
@@ -139,7 +140,7 @@ exec_always "setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle"
 	tiling_drag modifier titlebar
 
 	# lock the screen
-	bindsym $mod+Mod1+l exec loginctl lock-session
+	bindsym $mod+Mod1+l exec $powermenu	 #exec loginctl lock-session
 
 
 #===============#

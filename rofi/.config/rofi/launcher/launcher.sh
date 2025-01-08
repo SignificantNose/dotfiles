@@ -4,7 +4,7 @@
 ## Github : @adi1090x
 
 
-styles_dir="$HOME/.config/rofi/styles"
+styles_dir="$HOME/.config/rofi/launcher/styles"
 theme='main'
 
 ## Run
