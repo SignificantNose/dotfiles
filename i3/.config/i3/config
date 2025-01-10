@@ -298,49 +298,35 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command 	i3blocks
-#	position 	top
-#}
+#==============================#
+# bar (i3blocks) configuration #
+#==============================#
 
 bar {
-    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
     position top
-    font pango: JetBrains Mono Nerd Font 10
-    tray_output none
-	colors {
-		background #212121
-		separator  #2f2f2f
-		#			        border      background  text
-		focused_workspace	#2f2f2f		#2f2f2f     #ffffff
-		inactive_workspace	#212121	    #212121	    #ffffff
-        urgent_workspace    #212121     #212121     #ffffff
-	}
-}
+    mode dock
+    tray_output primary
+    tray_padding 4
 
-#bar {
-#    position top
-#    mode dock
-#    tray_output primary
-#    tray_padding 4
-#    font pango:MesloLGS NF 12
-#    separator_symbol " "
-#    strip_workspace_numbers yes
-#    status_command i3blocks
-#    colors {
-#      background #2e3440
-#      statusline #d8dee9
-#      separator #8FBCBB
-#
-#      focused_workspace  #2e3440 #2e3440 #81A1C1
-#      active_workspace   #2e3440 #2e3440 #8FBCBB
-#      inactive_workspace #2e3440 #2e3440 #4c566a
-#      urgent_workspace   #2e3440 #2e3440 #BF616A
-#      binding_mode       #2e3440 #2e3440 #BF616A
-#    }
-#}
+    # font pango: Source Code Pro 10
+    font pango: JetBrains Mono Nerd Font 10
+
+    separator_symbol "  "
+    strip_workspace_numbers yes
+    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+
+    colors {
+        background #2E3440
+        separator  #2E3440
+        statusline #81a1c1
+
+        focused_workspace  #81a1c1 #81a1c1 #2E3440
+        active_workspace   #4C566A #2E3440 #81a1c1
+        inactive_workspace #2E3440 #2E3440 #888888
+        urgent_workspace   #BF616A #BF616A #81a1c1
+        binding_mode       #D08770 #D08770 #81a1c1
+    }
+}
 
 #====================================#
 # Natural scrolling and tap-to-click #

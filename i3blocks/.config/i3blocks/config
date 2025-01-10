@@ -1,13 +1,15 @@
-[click]
-full_text=Click me!
-command=echo "Got clicked with button $button"
-color=#F79494
-
-# Guess the weather hourly
-[weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
-interval=3600
-color=#A4C2F4
+# github: https://github.com/chebro/dotfiles/
+[wifi]
+command=$SCRIPT_DIR/wifi
+interval=once
+signal=8
+#color=#2e3440
+#background=#88c0d0
+#border=#2e3440
+#border_left=0
+#border_right=0
+#border_top=2
+#border_bottom=2
 
 
 # AUR package: xkb-switch-git
@@ -17,7 +19,7 @@ command=bash -c 'xkb-switch;xkb-switch -W'
 interval=persist
 
 [volume-pipewire]
-command=$SCRIPT_DIR/volume-pipewire
+command=$SCRIPT_DIR/volume-pipewire -C '#81a1c1' -c '#4c566a'
 interval=once
 signal=1
 
@@ -31,10 +33,22 @@ DEFAULT_COLOR="#ffffff"
 MUTED_COLOR="#a0a0a0"
 
 
-[battery2]
-command=$SCRIPT_DIR/battery2
-markup=pango
+#[battery2]
+#command=$SCRIPT_DIR/battery2
+#markup=pango
+#interval=30
+
+
+[battery]
+command=$SCRIPT_DIR/battery
 interval=30
+#color=#eceff4
+#background=#4c566a
+#border=#2e3440
+#border_left=0
+#border_right=0
+#border_top=2
+#border_bottom=2
 
 # Query my default IP address only on startup
 #[ip]
@@ -42,7 +56,18 @@ interval=30
 #interval=once
 #color=#91E78B
 
+[calendar]
+command=$SCRIPT_DIR/calendar
+interval=once
+signal=2
+#LABEL= 
+DATEFMT=+%m/%d
+SHORTFMT=+%m/%d
+HEIGHT=180
+WIDTH=220
+
+
 # Update time every 5 seconds
 [time]
-command=date +%T
+command=date +%I:%M
 interval=5
