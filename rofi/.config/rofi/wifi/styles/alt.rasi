@@ -1,3 +1,4 @@
+/* WARNING: copied from launcher rofi config */
 /**
  *
  * Author : Aditya Shakya (adi1090x)
@@ -20,8 +21,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
-@import                          "shared/fonts.rasi"
+@import                          "~/.config/rofi/wifi/shared/colors.rasi"
+@import                          "~/.config/rofi/wifi/shared/fonts.rasi"
 
 * {
     border-colour:               var(selected);
