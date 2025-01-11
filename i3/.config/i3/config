@@ -15,6 +15,7 @@ set $right l
 set $term alacritty
 set $menu ~/.config/rofi/launcher/launcher.sh
 set $powermenu ~/.config/rofi/powermenu/powermenu.sh
+set $wifi ~/.config/rofi/wifi/wifi.sh
 
 
 # Colors
@@ -142,6 +143,8 @@ exec_always "setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle"
 	# lock the screen
 	bindsym $mod+Mod1+l exec $powermenu	 #exec loginctl lock-session
 
+	# wifi connection
+	bindsym $mod+n exec $wifi
 
 #===============#
 # Audio control #

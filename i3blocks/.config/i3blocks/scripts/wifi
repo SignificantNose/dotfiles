@@ -27,3 +27,7 @@ if [[ $SSID ]]; then
 else
     echo "$WS_N"
 fi
+
+case "$BLOCK_BUTTON" in
+    1|2|3) ~/.config/rofi/wifi/wifi.sh
+esac

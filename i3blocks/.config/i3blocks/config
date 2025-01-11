@@ -1,15 +1,7 @@
 # github: https://github.com/chebro/dotfiles/
 [wifi]
 command=$SCRIPT_DIR/wifi
-interval=once
-signal=8
-#color=#2e3440
-#background=#88c0d0
-#border=#2e3440
-#border_left=0
-#border_right=0
-#border_top=2
-#border_bottom=2
+interval=10
 
 
 # AUR package: xkb-switch-git
