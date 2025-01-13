@@ -72,8 +72,9 @@ default_border pixel 2
 #============#
 # Wallpapers #
 #============#
-exec feh --bg-fill -F --randomize ~/Pictures/Wallpapers
-
+#exec feh --bg-fill -F --randomize ~/Pictures/Wallpapers
+#this option works best for having 2 monitors:
+exec-always feh --bg-scale -F --randomize ~/Pictures/Wallpapers
 
 #===========================#
 # Idle & lock configuration
@@ -340,5 +341,5 @@ bar {
 # Natural scrolling and tap-to-click #
 #====================================#
 # scripts from: https://github.com/maxwell-bland/i3-natural-scrolling-and-tap/
-exec ~/.config/i3/scripts/touchpad/inverse-scroll.sh
-exec ~/.config/i3/scripts/touchpad/tap-to-click.sh
+exec-always ~/.config/i3/scripts/touchpad/inverse-scroll.sh
+exec-always ~/.config/i3/scripts/touchpad/tap-to-click.sh
