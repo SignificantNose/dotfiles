@@ -5,6 +5,7 @@
 
 # Current Theme
 styles_dir="~/.config/rofi/powermenu/styles"
+shared_dir="~/.config/rofi/powermenu/shared"
 theme='main'
 
 # CMDs
@@ -33,7 +34,7 @@ confirm_cmd() {
 	rofi -dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/shared/confirm.rasi
+		-theme ${shared_dir}/confirm.rasi
 }
 
 # Ask for confirmation
@@ -55,8 +56,8 @@ run_cmd() {
 		elif [[ $1 == '--reboot' ]]; then
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
+			#mpc -q pause
+			#amixer set Master mute
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
