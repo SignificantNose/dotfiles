@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if !([ "$#" -eq 2 ] && [ "$1" -eq "$1" ] && [ "$2" -eq "$2" ]); then
 	echo "usage: $0 timeout_before_off timeout_before_lock"
 	exit 1
@@ -28,13 +27,11 @@ wait
 
 brightnessctl set $br_stage2
 
-
-
 sleep $timeout_before_lock & 
 wait
 
-i3lock
+/home/significantnose/.config/i3/scripts/screen-idle/lock.sh
 
 # this part has been copied too:
 sleep 2147483647 &
-wait
+#wait
