@@ -138,6 +138,8 @@ unset key
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Docker aliases
+[[ ! -f ~/.config/docker/alias.sh ]] || source ~/.config/docker/alias.sh
 
 # adjusting PATH
 set_path(){
@@ -182,3 +184,10 @@ function rm () {
 
 
 alias "realrm"='/usr/bin/rm'
+
+
+
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files --hidden'
+  export FZF_DEFAULT_OPTS='-m'
+fi
