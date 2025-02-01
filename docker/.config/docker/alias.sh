@@ -62,6 +62,10 @@ function dc-fn {
         docker compose $*
 }
 
+function db-fn {
+	docker buildx build $*
+}
+
 alias dc=dc-fn
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
@@ -81,3 +85,5 @@ alias dpsa="docker ps -a"
 alias drun="docker run"
 alias dsp="docker system prune --all"
 alias dsr=dsr-fn
+
+alias db=db-fn
