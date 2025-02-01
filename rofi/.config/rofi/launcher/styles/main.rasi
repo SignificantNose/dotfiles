@@ -22,10 +22,11 @@ configuration {
 }
 */
 configuration {
-	modi:		"run,calc";
-    	show-icons:	false;
-    	display-run:	"";
-    	display-calc:	"🖩";
+	modi:			"run,calc,clipboard:greenclip print";
+    	show-icons:		false;
+    	display-run:		"";
+    	display-calc:		"🖩";
+	display-clipboard:	"📋";
 }
 
 /*****----- Global Properties -----*****/
