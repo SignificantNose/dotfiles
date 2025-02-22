@@ -6,6 +6,7 @@
 - Install zim in the installation script, provide p10k config accordingly
 - Add script for stowing all the applications accordingly (to not do it manually each time)
 - Notes on updating the calendar blocklet
+- Fix paths (make them relative)
 
 ## Requirements
 
