@@ -172,7 +172,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
-exec_always redshift
+exec --no-startup-id redshift
 
 #===========#
 # Clipboard #
