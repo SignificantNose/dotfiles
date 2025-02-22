@@ -140,6 +140,7 @@ unset key
 
 # Docker aliases
 [[ ! -f ~/.config/docker/alias.sh ]] || source ~/.config/docker/alias.sh
+[[ ! -f ~/.config/git/alias.sh ]] || source ~/.config/git/alias.sh
 
 # adjusting PATH
 set_path(){

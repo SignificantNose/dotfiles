@@ -1,0 +1,5 @@
+alias gs="git ss"
+alias gl="git log --oneline"
+alias ga="git add -A"
+alias gc="git ct -m"
+alias gp="git push"
