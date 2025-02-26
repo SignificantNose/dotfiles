@@ -177,10 +177,13 @@ set_path $HOME/.dotnet/tools
 
 
 function rm () {
-  for f in "$@"
-  do
-    mv -f "$f" "/tmp/$f"
-  done
+    for f in "$@"; do
+        filename=$(basename "$f")
+        timestamp=$(date +%Y%m%d%H%M%S)
+        new_name="${filename%.*}_$timestamp.${filename##*.}"
+
+        mv -f "$f" "/tmp/$new_name"
+    done
 }
 
 
