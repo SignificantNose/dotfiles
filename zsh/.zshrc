@@ -177,17 +177,21 @@ set_path $HOME/.dotnet/tools
 
 
 function rm () {
+    rm_dir="/tmp/rm-d"
+    mkdir -p "$rm_dir"
     for f in "$@"; do
         filename=$(basename "$f")
         timestamp=$(date +%Y%m%d%H%M%S)
         new_name="${filename%.*}_$timestamp.${filename##*.}"
 
-        mv -f "$f" "/tmp/$new_name"
+        mv -f "$f" "$rm_dir/$new_name"
     done
 }
 
 
 alias "realrm"='/usr/bin/rm'
+alias "clip"='xclip -selection clipboard'
+alias "xo"='xdg-open'
 
 
 
