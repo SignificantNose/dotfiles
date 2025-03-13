@@ -10,3 +10,14 @@ vim.cmd("set relativenumber")
 -- leader key
 vim.g.mapleader = " "
 
+-- copy to clipboard
+vim.cmd('vnoremap  <leader>y  "+y')
+vim.cmd('nnoremap  <leader>Y  "+yg_')
+vim.cmd('nnoremap  <leader>y  "+y')
+vim.cmd('nnoremap  <leader>yy  "+yy')
+
+-- paste from clipboard
+vim.cmd('nnoremap <leader>p "+p')
+vim.cmd('nnoremap <leader>P "+P')
+vim.cmd('vnoremap <leader>p "+p')
+vim.cmd('vnoremap <leader>P "+P')
