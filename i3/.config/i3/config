@@ -183,7 +183,7 @@ exec_always greenclip daemon
 # Battery notifications #
 #=======================#
 set $battery_dir ~/.config/i3/scripts/battery-notification/
-exec_always $battery_dir/i3-battery-popup -n -t 5m -L 20 -m 'Please recharge headset' -s $battery_dir/i3-battery-popup.wav
+exec --no-startup-id $battery_dir/i3-battery-popup -n -t 5m -L 20 -m 'Please recharge headset' -s $battery_dir/i3-battery-popup.wav
 
 
 #=============#
