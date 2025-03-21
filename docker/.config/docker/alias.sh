@@ -13,3 +13,6 @@ alias drmcs=drmcs-fn
 alias dim="docker images"
 alias dps="docker ps"
 alias drun="docker run"
+alias dl="docker logs"
+
+alias dpsf="docker ps --format 'table {{.ID}}\\t{{.Image}}\\t{{.Status}}\\t{{.Names}}'"
