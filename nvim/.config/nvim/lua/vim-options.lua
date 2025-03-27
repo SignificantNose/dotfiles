@@ -7,6 +7,8 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set relativenumber")
 
+vim.o.scrolloff = 5
+
 -- leader key
 vim.g.mapleader = " "
 
