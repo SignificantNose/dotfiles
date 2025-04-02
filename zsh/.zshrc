@@ -199,3 +199,5 @@ if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files --hidden'
   export FZF_DEFAULT_OPTS='-m'
 fi
+
+export EDITOR=/usr/bin/nvim
