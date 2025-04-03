@@ -118,7 +118,9 @@ exec --no-startup-id nm-applet
 
 #exec_always "setxkbmap -layout us,ru"
 #exec_always "setxkbmap -option 'grp:lalt_lshift_toggle'"
-exec_always "setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle"
+# exec_always --no-startup-id "setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle"
+exec_always --no-startup-id setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle
+for_window [class=".*"] exec --no-startup-id sh -c "sleep 0.1 && setxkbmap -layout us,ru -variant ,, -option grp:lalt_lshift_toggle"
 
 #==============#
 # Key bindings #
