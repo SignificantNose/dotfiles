@@ -57,3 +57,4 @@ i3lock \
   --layout-font="JetBrainsMono Nerd Font" \
   --verif-font="JetBrainsMono Nerd Font" \
   --wrong-font="JetBrainsMono Nerd Font" \
+  --keylayout 2
