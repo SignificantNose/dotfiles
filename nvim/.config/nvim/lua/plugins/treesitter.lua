@@ -7,7 +7,8 @@ local M = {
 		local ts_config = require("nvim-treesitter.configs")
 		ts_config.setup({
 			--ensure_installed = {"lua", "python", "c_sharp"},
-			ensure_installed = { "http" },
+			-- ensure_installed = { "http" },
+
 			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },

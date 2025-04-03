@@ -1,26 +1,40 @@
 return {
-	"stevearc/oil.nvim",
-	---@module 'oil'
-	---@type oil.SetupOpts
-	opts = {},
-	-- Optional dependencies
-	dependencies = { { "echasnovski/mini.icons", opts = {} } },
-	-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-	-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
-	lazy = false,
-	config = function()
-		require("oil").setup({
-			columns = { "icon" },
+	{
+		"stevearc/oil.nvim",
+		---@module 'oil'
+		---@type oil.SetupOpts
+		opts = {},
+		-- Optional dependencies
+		dependencies = { { "echasnovski/mini.icons", opts = {} } },
+		-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+		lazy = false,
+		config = function()
+			require("oil").setup({
+				columns = { "icon" },
 
-			default_file_explorer = true,
-			view_options = {
-				show_hidden = true,
-			},
+				default_file_explorer = true,
+				view_options = {
+					show_hidden = true,
+				},
 
-			delete_to_trash = false,
-			cleanup_delay_ms = 2000,
-		})
+				delete_to_trash = false,
+				cleanup_delay_ms = 2000,
+				win_options = {
+					signcolumn = "yes:2",
+				},
+			})
 
-		vim.keymap.set("n", "<C-e>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-	end,
+			vim.keymap.set("n", "<C-e>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+		end,
+	},
+	{
+		"refractalize/oil-git-status.nvim",
+
+		dependencies = {
+			"stevearc/oil.nvim",
+		},
+
+		config = true,
+	},
 }

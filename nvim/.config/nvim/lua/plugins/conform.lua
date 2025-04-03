@@ -6,6 +6,8 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				cs = { "csharpier" },
+				javascript = { "deno_fmt" },
+				typescript = { "deno_fmt" },
 			},
 		})
 
