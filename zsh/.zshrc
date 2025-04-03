@@ -201,3 +201,7 @@ if type rg &> /dev/null; then
 fi
 
 export EDITOR=/usr/bin/nvim
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
