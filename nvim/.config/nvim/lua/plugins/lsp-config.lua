@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "csharp_ls", "pyright", "ts_ls", "angularls" },
+				ensure_installed = { "lua_ls", "csharp_ls", "pyright", "ts_ls", "angularls", "superhtml" },
 			})
 		end,
 	},
@@ -32,6 +32,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.angularls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.superhtml.setup({
 				capabilities = capabilities,
 			})
 

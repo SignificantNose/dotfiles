@@ -8,6 +8,9 @@ return {
 				cs = { "csharpier" },
 				javascript = { "deno_fmt" },
 				typescript = { "deno_fmt" },
+				typescriptreact = { "deno_fmt" },
+				json = { "fixjson" },
+				-- html = { "superhtml" },
 			},
 		})
 
