@@ -1,5 +1,8 @@
 return {
   "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim"
+  },
 
   config = function()
     local null_ls = require("null-ls")
@@ -10,8 +13,9 @@ return {
 
         null_ls.builtins.formatting.prettier, -- js, ts, and much more
 
-        null_ls.builtins.formatting.isort, -- python
-        null_ls.builtins.formatting.black, -- python
+        require('none-ls.formatting.ruff').with{ extra_args = {"--extend-select", "I"}},
+        require('none-ls.formatting.ruff_format')
+
       },
     })
 

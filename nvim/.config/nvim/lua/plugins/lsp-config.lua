@@ -15,6 +15,7 @@ return {
 					"jsonls",
 					"superhtml",
           "angularls",
+          "pylsp"
 				},
 			})
 		end,
@@ -43,6 +44,11 @@ return {
 				filetypes = { "superhtml" },
 			})
 
+      vim.lsp.enable("pylsp")
+      vim.lsp.config("pylsp", {
+				capabilities = capabilities,
+      })
+
 			-- local cwd = vim.fn.getcwd()
 			-- local project_library_path = cwd .. "/node_modules"
 			--
@@ -56,10 +62,10 @@ return {
 			-- 	"--stdio",
 			-- }
 			vim.lsp.enable("angularls")
-      vim.lsp.config("angularls",{
+			   vim.lsp.config("angularls",{
 				capabilities = capabilities,
 				-- cmd = cmd,
-      })
+			   })
 
 
 			-- lspconfig.rust_analyzer.setup({
