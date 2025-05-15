@@ -193,6 +193,8 @@ alias "realrm"='/usr/bin/rm'
 alias "clip"='xclip -selection clipboard'
 alias "xo"='xdg-open'
 alias "td"='todoist-cli'
+alias "nv"='nvim'
+alias "nvv"='nvim .'
 
 
 
