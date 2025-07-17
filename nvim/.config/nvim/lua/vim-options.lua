@@ -14,9 +14,11 @@ vim.g.mapleader = " "
 
 -- copy to clipboard
 vim.cmd('vnoremap  <leader>y  "+y')
+vim.cmd('vnoremap <leader>d "+d')
 vim.cmd('nnoremap  <leader>Y  "+yg_')
 vim.cmd('nnoremap  <leader>y  "+y')
-vim.cmd('nnoremap  <leader>yy  "+yy')
+vim.cmd('nnoremap <leader>d "+d')
+vim.cmd('nnoremap <leader>D "+D')
 
 -- paste from clipboard
 vim.cmd('nnoremap <leader>p "+p')

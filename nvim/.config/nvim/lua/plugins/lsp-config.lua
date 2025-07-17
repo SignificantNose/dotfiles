@@ -14,8 +14,9 @@ return {
 					"ts_ls",
 					"jsonls",
 					"superhtml",
-          "angularls",
-          "pylsp"
+					"angularls",
+					"pylsp",
+					-- "rust_analyzer",  -- use system installation of rust
 				},
 			})
 		end,
@@ -44,33 +45,41 @@ return {
 				filetypes = { "superhtml" },
 			})
 
-      vim.lsp.enable("pylsp")
-      vim.lsp.config("pylsp", {
+			vim.lsp.enable("pylsp")
+			vim.lsp.config("pylsp", {
 				capabilities = capabilities,
-      })
+			})
 
-			-- local cwd = vim.fn.getcwd()
-			-- local project_library_path = cwd .. "/node_modules"
-			--
-			-- local node_modules_path = "/home/significantnose/.npm-global/lib/node_modules/"
-			-- local cmd = {
-			-- 	node_modules_path .. "/@angular/language-server/bin/ngserver",
-			-- 	"--ngProbeLocations",
-			-- 	node_modules_path .. "/@angular/language-server/bin",
-			-- 	"--tsProbeLocations",
-			-- 	node_modules_path .. "/typescript/lib",
-			-- 	"--stdio",
-			-- }
+			vim.lsp.enable("rust_analyzer")
+			vim.lsp.config("rust_analyzer", {
+				capabilities = capabilities,
+				-- settings = {
+				-- 	["rust-analyzer"] = {
+				-- 		assist = {
+				-- 			importEnforceGranularity = true,
+				-- 			importPrefix = "crate",
+				-- 		},
+				-- 		cargo = {
+				-- 			allFeatures = true,
+				-- 		},
+				-- 		checkOnSave = {
+				-- 			command = "clippy",
+				-- 		},
+				-- 		inlayHints = { locationLinks = false },
+				-- 		diagnostics = {
+				-- 			enable = true,
+				-- 			experimental = {
+				-- 				enable = true,
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
+			})
+
 			vim.lsp.enable("angularls")
-			   vim.lsp.config("angularls",{
+			vim.lsp.config("angularls", {
 				capabilities = capabilities,
-				-- cmd = cmd,
-			   })
-
-
-			-- lspconfig.rust_analyzer.setup({
-			-- 	capabilities = capabilities,
-			-- })
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -81,23 +90,6 @@ return {
 				local new_config = not vim.diagnostic.config().virtual_text
 				vim.diagnostic.config({ virtual_text = new_config })
 			end, { desc = "Toggle diagnostic virtual_text" })
-		end,
-	},
-	{
-		"simrat39/rust-tools.nvim",
-		config = function()
-			local rt = require("rust-tools")
-
-			-- rt.setup({
-			-- 	server = {
-			-- 		on_attach = function(_, bufnr)
-			-- 			-- Hover actions
-			-- 			vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-			-- 			-- Code action groups
-			-- 			vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
-			-- 		end,
-			-- 	},
-			-- })
 		end,
 	},
 }
