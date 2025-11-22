@@ -62,5 +62,4 @@ key = "F5"
 
 
 [terminal.shell]
-program="/usr/bin/zsh"
-args=["-c","tmux"]
+program="/home/yanucevich.dv@minsk.intechs.by/.local/bin/tmux"

@@ -88,7 +88,7 @@ case ${chosen} in
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
 			betterlockscreen -l
 		elif [[ -x '/usr/bin/i3lock' ]]; then
-			/home/significantnose/.config/i3/scripts/screen-idle/lock.sh
+			/home/yanucevich.dv@minsk.intechs.by/.config/i3/scripts/screen-idle/lock.sh
 		fi
         ;;
     $suspend)

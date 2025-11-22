@@ -195,6 +195,7 @@ alias "xo"='xdg-open'
 alias "td"='todoist-cli'
 alias "nv"='nvim'
 alias "nvv"='nvim .'
+alias "l"="ls -gGa"
 
 
 
@@ -215,7 +216,17 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+#if command -v tmux >/dev/null 2>&1; then
+#  [ -z "$TMUX" ] && exec tmux
+#fi
 
+
+export PASSWORD_STORE_DIR=~/.password-store
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)

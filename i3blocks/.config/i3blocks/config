@@ -10,19 +10,24 @@ label=⌨
 command=bash -c 'xkb-switch;xkb-switch -W'
 interval=persist
 
-[volume-pipewire]
-command=$SCRIPT_DIR/volume-pipewire -C '#81a1c1' -c '#4c566a'
-interval=once
-signal=1
+# [i3blocklet-pipewire-sink]
+# interval=once
+# signal=1
+# command=$SCRIPT_DIR/i3blocklet-pipewire-sink/script
 
-# exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
-# bluetooth headphones do not show their name here for some reason:
-#LONG_FORMAT="${SYMB} ${VOL}% ${NAME}"
-#USE_ALSA_NAME=1
-LONG_FORMAT="${SYMB} ${VOL}%"
-SHORT_FORMAT="${SYMB} ${VOL}%"
-DEFAULT_COLOR="#ffffff"
-MUTED_COLOR="#a0a0a0"
+# [volume-pipewire]
+# command=$SCRIPT_DIR/volume-pipewire -C '#81a1c1' -c '#4c566a'
+# interval=once
+# signal=1
+#
+# # exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+# # bluetooth headphones do not show their name here for some reason:
+# #LONG_FORMAT="${SYMB} ${VOL}% ${NAME}"
+# #USE_ALSA_NAME=1
+# LONG_FORMAT="${SYMB} ${VOL}%"
+# SHORT_FORMAT="${SYMB} ${VOL}%"
+# DEFAULT_COLOR="#ffffff"
+# MUTED_COLOR="#a0a0a0"
 
 
 #[battery2]

@@ -9,5 +9,5 @@
 	ss = status
 	br = branch
 [core]
-	editor = vim
+  editor = nvim
 	pager = cat

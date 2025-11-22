@@ -22,7 +22,7 @@ configuration {
 }
 */
 configuration {
-	modi:			"run,calc,clipboard:greenclip print";
+	modi:			"run,clipboard:greenclip print";
     	show-icons:		false;
     	display-run:		"";
     	display-calc:		"🖩";

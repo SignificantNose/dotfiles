@@ -22,4 +22,4 @@ timeout_dpms=$(( $timeout_lock_screen + 5 ))
 xset s $timeout_dim $(( $timeout_dpms + 1 ))
 xset dpms $timeout_dpms $timeout_dpms $timeout_dpms
 
-xss-lock --transfer-sleep-lock -n "/home/significantnose/.config/i3/scripts/dim-screen.sh $delta_dim_screen_off $delta_screen_off_lock_screen" -- "/home/significantnose/.config/i3/scripts/screen-idle/lock.sh" -n
+xss-lock --transfer-sleep-lock -n "/home/yanucevich.dv@minsk.intechs.by/.config/i3/scripts/dim-screen.sh $delta_dim_screen_off $delta_screen_off_lock_screen" -- "/home/yanucevich.dv@minsk.intechs.by/.config/i3/scripts/screen-idle/lock.sh" -n
