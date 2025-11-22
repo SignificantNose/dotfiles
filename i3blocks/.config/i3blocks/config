@@ -1,3 +1,18 @@
+# https://github.com/vivien/i3blocks-contrib/tree/master/usb
+[usb]
+command=$SCRIPT_DIR/usb
+markup=pango
+signal=1
+interval=10
+IGNORE_LIST=["nvme0n1p1", "nvme0n1p2", "nvme0n1p3", "nvme0n1p4", "nvme0n1p5", "nvme0n1p6", "nvme0n1p7", "sda1"]
+INFO_TEXT_COLOR=#81a1c1
+MOUNTED_COLOR=#8fbcbb
+PLUGGED_COLOR=#4c566a
+LOCKED_COLOR=#3b4252
+UNLOCKED_NOT_MOUNTED_COLOR=#ebcb8b
+PARTITIONLESS_COLOR=#bf616a
+SEPARATOR=<span color='#4c566a'> | </span>
+
 # github: https://github.com/chebro/dotfiles/
 [wifi]
 command=$SCRIPT_DIR/wifi

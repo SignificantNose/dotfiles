@@ -55,3 +55,7 @@ zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
 
 zmodule romkatv/powerlevel10k --use degit
+
+
+# https://github.com/joshskidmore/zsh-fzf-history-search
+zmodule joshskidmore/zsh-fzf-history-search
