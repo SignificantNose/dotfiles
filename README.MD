@@ -1,7 +1,7 @@
 # My own dotfiles
 
 ## Todo
-- Add script for installing the required packages (the configs for which are provided)
+- Add script for installing the required packages (the configs for which are provided; this also includes necessary fonts)
 - Add stow-ignore (presumably in order to avoid stow reading the installation script)
 - Install zim in the installation script, provide p10k config accordingly
 - Add script for stowing all the applications accordingly (to not do it manually each time)

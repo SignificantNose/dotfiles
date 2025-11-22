@@ -188,6 +188,10 @@ function rm () {
     done
 }
 
+function watchSync() {
+  watch -n1 'grep -E "(Dirty|Write)" /proc/meminfo; echo; ls /sys/block/ | while read device; do awk "{ print \"$device: \"  \$9 }" "/sys/block/$device/stat"; done'
+}
+
 
 alias "realrm"='/usr/bin/rm'
 alias "clip"='xclip -selection clipboard'
@@ -204,6 +208,7 @@ if type rg &> /dev/null; then
 fi
 
 export EDITOR=/usr/bin/nvim
+source /usr/share/nvm/init-nvm.sh
 
 
 
@@ -214,8 +219,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)

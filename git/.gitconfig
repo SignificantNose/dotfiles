@@ -11,3 +11,5 @@
 [core]
 	editor = vim
 	pager = cat
+[safe]
+	directory = /mnt/buffer/obsidian_vault
